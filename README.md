@@ -1,6 +1,6 @@
 # TC3041 Proyecto  Final Primavera 2019
 
-# Guardabosques iOS App
+# Guardabosques
 ---
 
 ##### Integrantes:
