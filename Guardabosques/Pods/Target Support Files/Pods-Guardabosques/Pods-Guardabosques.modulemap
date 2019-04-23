@@ -1,0 +1,6 @@
+framework module Pods_Guardabosques {
+  umbrella header "Pods-Guardabosques-umbrella.h"
+
+  export *
+  module * { export * }
+}
