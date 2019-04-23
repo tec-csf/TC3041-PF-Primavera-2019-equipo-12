@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2876E036226F8005002B1326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E035226F8005002B1326 /* AppDelegate.swift */; };
-		2876E038226F8005002B1326 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E037226F8005002B1326 /* ViewController.swift */; };
 		2876E03B226F8005002B1326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876E039226F8005002B1326 /* Main.storyboard */; };
 		2876E03D226F8007002B1326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2876E03C226F8007002B1326 /* Assets.xcassets */; };
 		2876E040226F8007002B1326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876E03E226F8007002B1326 /* LaunchScreen.storyboard */; };
@@ -16,13 +15,13 @@
 		2876E04F226F9A7F002B1326 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2876E04C226F9A7F002B1326 /* Roboto-Light.ttf */; };
 		2876E050226F9A7F002B1326 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2876E04D226F9A7F002B1326 /* Roboto-Regular.ttf */; };
 		2876E052226F9DC3002B1326 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2876E051226F9DC3002B1326 /* GoogleService-Info.plist */; };
+		2876E054226FD1B6002B1326 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E053226FD1B6002B1326 /* WelcomeViewController.swift */; };
 		D5FF2DF800FB2ED999129813 /* Pods_Guardabosques.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DF9E497B3D46B2F20DF7B9 /* Pods_Guardabosques.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2876E032226F8005002B1326 /* Guardabosques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardabosques.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2876E035226F8005002B1326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2876E037226F8005002B1326 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2876E03A226F8005002B1326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2876E03C226F8007002B1326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2876E03F226F8007002B1326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 		2876E04C226F9A7F002B1326 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		2876E04D226F9A7F002B1326 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		2876E051226F9DC3002B1326 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2876E053226FD1B6002B1326 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5C801CD3BF891C4927990118 /* Pods-Guardabosques.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guardabosques.debug.xcconfig"; path = "Target Support Files/Pods-Guardabosques/Pods-Guardabosques.debug.xcconfig"; sourceTree = "<group>"; };
 		A5DF9E497B3D46B2F20DF7B9 /* Pods_Guardabosques.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guardabosques.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5ACFE9CE252070569FAD7C6 /* Pods-Guardabosques.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guardabosques.release.xcconfig"; path = "Target Support Files/Pods-Guardabosques/Pods-Guardabosques.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		2876E049226F803B002B1326 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2876E037226F8005002B1326 /* ViewController.swift */,
+				2876E053226FD1B6002B1326 /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2876E038226F8005002B1326 /* ViewController.swift in Sources */,
+				2876E054226FD1B6002B1326 /* WelcomeViewController.swift in Sources */,
 				2876E036226F8005002B1326 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

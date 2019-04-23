@@ -19,12 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        print(FirebaseApp.description())
+        //print(FirebaseApp.description())
         
         //test db connection
-        let myDatabase: DatabaseReference!
-        myDatabase = Database.database().reference()
-        myDatabase.setValue("We got data!")
+        //let myDatabase: DatabaseReference!
+        //myDatabase = Database.database().reference()
+        //myDatabase.setValue("We got data!")
         
         return true
     }
