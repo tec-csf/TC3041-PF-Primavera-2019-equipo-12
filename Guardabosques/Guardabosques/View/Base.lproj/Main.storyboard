@@ -72,6 +72,9 @@
                         <viewLayoutGuide key="safeArea" id="dRZ-kM-DKu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="AVj-pw-IfG"/>
+                    <connections>
+                        <segue destination="LkI-bm-s8I" kind="push" identifier="goToMenu" animates="NO" id="vs0-qw-DPT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdD-Vc-hEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +107,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logInPressed:" destination="mPJ-lb-c49" eventType="touchUpInside" id="UpM-bU-ACk"/>
+                                    <action selector="logInPressed:" destination="mPJ-lb-c49" eventType="touchUpInside" id="CAN-3Z-SFy"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxH-73-DHa">
@@ -114,7 +117,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEz-PW-xIb">
                                 <rect key="frame" x="48" y="153" width="224" height="35"/>
@@ -123,7 +126,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,6 +149,8 @@
                     <navigationItem key="navigationItem" title="Log In" id="9EZ-4l-ZoK"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="xEz-PW-xIb" id="FFP-lW-IfO"/>
+                        <outlet property="passwordTextfield" destination="nxH-73-DHa" id="Gui-uJ-ZmQ"/>
                         <segue destination="LkI-bm-s8I" kind="push" identifier="goToMenu" animates="NO" id="9Pa-eg-7zw"/>
                     </connections>
                 </viewController>
@@ -200,7 +205,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logInPressed:" destination="XvP-Fe-gJM" eventType="touchUpInside" id="6x8-hG-0q5"/>
+                                    <action selector="registerPressed:" destination="XvP-Fe-gJM" eventType="touchUpInside" id="AU8-Pm-qDs"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0C-tX-zBs">
@@ -210,7 +215,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZE-XN-J4z">
                                 <rect key="frame" x="48" y="153" width="224" height="35"/>
@@ -219,7 +224,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,12 +247,14 @@
                     <navigationItem key="navigationItem" title="Register" id="zOP-zD-d0R"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="aZE-XN-J4z" id="yH2-8h-lcL"/>
+                        <outlet property="passwordTextfield" destination="q0C-tX-zBs" id="g8D-NF-nfe"/>
                         <segue destination="LkI-bm-s8I" kind="push" identifier="goToMenu" animates="NO" id="Ahj-Mg-zlG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwu-Vi-mRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086" y="380"/>
+            <point key="canvasLocation" x="1086" y="418"/>
         </scene>
         <!--Menu-->
         <scene sceneID="Y2n-Mb-aFR">

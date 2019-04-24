@@ -1,8 +1,9 @@
 //
 //  WelcomeViewController.swift
-//  
+//  Guardabosques
 //
 //  Created by JJ Santos on 4/23/19.
+//  Copyright © 2019 JJ Santos. All rights reserved.
 //
 
 import UIKit
@@ -15,22 +16,10 @@ class WelcomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // If there is a logged in user, skip this screen and go straight to MenuViewController
-        
+        // If there is a logged user, go straight to Menu
         if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: "goToMenu", sender: self)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
