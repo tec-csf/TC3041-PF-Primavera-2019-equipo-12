@@ -19,6 +19,10 @@
 		2876E058226FD40F002B1326 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E057226FD40F002B1326 /* RegisterViewController.swift */; };
 		2876E05A226FD430002B1326 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E059226FD430002B1326 /* MenuViewController.swift */; };
 		2876E05C226FD45F002B1326 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E05B226FD45F002B1326 /* WelcomeViewController.swift */; };
+		2876E05E226FEEB3002B1326 /* FloraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E05D226FEEB3002B1326 /* FloraViewController.swift */; };
+		2876E060226FEEC4002B1326 /* FaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E05F226FEEC4002B1326 /* FaunaViewController.swift */; };
+		2876E062226FEED7002B1326 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E061226FEED7002B1326 /* WeatherViewController.swift */; };
+		2876E064226FEEF3002B1326 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E063226FEEF3002B1326 /* AlertsViewController.swift */; };
 		D5FF2DF800FB2ED999129813 /* Pods_Guardabosques.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DF9E497B3D46B2F20DF7B9 /* Pods_Guardabosques.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		2876E057226FD40F002B1326 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2876E059226FD430002B1326 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2876E05B226FD45F002B1326 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2876E05D226FEEB3002B1326 /* FloraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloraViewController.swift; sourceTree = "<group>"; };
+		2876E05F226FEEC4002B1326 /* FaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaunaViewController.swift; sourceTree = "<group>"; };
+		2876E061226FEED7002B1326 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		2876E063226FEEF3002B1326 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		5C801CD3BF891C4927990118 /* Pods-Guardabosques.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guardabosques.debug.xcconfig"; path = "Target Support Files/Pods-Guardabosques/Pods-Guardabosques.debug.xcconfig"; sourceTree = "<group>"; };
 		A5DF9E497B3D46B2F20DF7B9 /* Pods_Guardabosques.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guardabosques.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5ACFE9CE252070569FAD7C6 /* Pods-Guardabosques.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guardabosques.release.xcconfig"; path = "Target Support Files/Pods-Guardabosques/Pods-Guardabosques.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +127,10 @@
 				2876E057226FD40F002B1326 /* RegisterViewController.swift */,
 				2876E055226FD3C7002B1326 /* LogInViewController.swift */,
 				2876E059226FD430002B1326 /* MenuViewController.swift */,
+				2876E05D226FEEB3002B1326 /* FloraViewController.swift */,
+				2876E05F226FEEC4002B1326 /* FaunaViewController.swift */,
+				2876E061226FEED7002B1326 /* WeatherViewController.swift */,
+				2876E063226FEEF3002B1326 /* AlertsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,8 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2876E058226FD40F002B1326 /* RegisterViewController.swift in Sources */,
+				2876E060226FEEC4002B1326 /* FaunaViewController.swift in Sources */,
 				2876E05C226FD45F002B1326 /* WelcomeViewController.swift in Sources */,
 				2876E036226F8005002B1326 /* AppDelegate.swift in Sources */,
+				2876E064226FEEF3002B1326 /* AlertsViewController.swift in Sources */,
+				2876E05E226FEEB3002B1326 /* FloraViewController.swift in Sources */,
+				2876E062226FEED7002B1326 /* WeatherViewController.swift in Sources */,
 				2876E056226FD3C7002B1326 /* LogInViewController.swift in Sources */,
 				2876E05A226FD430002B1326 /* MenuViewController.swift in Sources */,
 			);
