@@ -15,6 +15,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet var message: UILabel!
     @IBOutlet var username: UILabel!
     @IBOutlet var location: UILabel!
+    @IBOutlet var likes: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -15,6 +15,7 @@ class Report {
     var message = ""
     var username = ""
     var location = ""
+    var likes = ""
     
 }
 

@@ -17,7 +17,7 @@ class ReportViewController: UIViewController {
     let report = Report()
     
     
-    let name = Auth.auth().currentUser?.email
+    let username = Auth.auth().currentUser?.email
     var messageBody = ""
     var location = "El Triunfo"
     var category = ""
@@ -51,10 +51,11 @@ class ReportViewController: UIViewController {
         
         let reportDB = Database.database().reference().child(category)
         
-        let reportDictionary = ["Sender": name,
+        let reportDictionary = ["Username": username,
                                 "Location": location,
                                 "Title": subcategory,
                                  "MessageBody": messageBody,
+                                 "Likes": "0",
                                  "Date": Date().debugDescription]
         
         reportDB.childByAutoId().setValue(reportDictionary) {

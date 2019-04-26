@@ -40,8 +40,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let snapshotValue = snapshot.value as! Dictionary<String,String>
             let title = snapshotValue["Title"]!
             let message = snapshotValue["MessageBody"]!
-            let username = snapshotValue["Sender"]!
+            let username = snapshotValue["Username"]!
             let location = snapshotValue["Location"]!
+            let likes = snapshotValue["Likes"]!
             
             let report = Report()
 
@@ -49,6 +50,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             report.message = message
             report.username = username
             report.location = location
+            report.likes = likes
             
             
             self.reportArray.append(report)
@@ -59,9 +61,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
     }
-    
-    
-    
     
     
     
@@ -83,10 +82,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.location.text = reportArray[indexPath.row].location
         cell.message.text = reportArray[indexPath.row].message
         cell.username.text = reportArray[indexPath.row].username
+        cell.likes.text = reportArray[indexPath.row].likes
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        reportArray[indexPath.row].likes = "1"
+        
+        
+    }
     
     @IBAction func new(_ sender: Any) {
         performSegue(withIdentifier: "goToSubmenu", sender: self.recievedCategory)
