@@ -16,7 +16,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(recievedCategory)
+        self.title = recievedCategory.uppercased()
+        
 
         // Do any additional setup after loading the view.
     }

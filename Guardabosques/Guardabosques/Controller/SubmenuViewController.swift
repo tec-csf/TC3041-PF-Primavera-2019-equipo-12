@@ -26,7 +26,7 @@ class SubmenuViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("Categoria Submenu: ")
         //print(recievedCategory)
 
-        self.title = recievedCategory
+        self.title = recievedCategory.uppercased()
         
         if (recievedCategory=="flora") { genericArray = flora; image.image = UIImage(named: "leaf") }
         if (recievedCategory=="fauna") { genericArray = fauna; image.image = UIImage(named: "tiger") }
