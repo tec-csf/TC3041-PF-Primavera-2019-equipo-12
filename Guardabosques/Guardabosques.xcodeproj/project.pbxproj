@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28143C7E2273536F008D150E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C7D2273536F008D150E /* ProfileViewController.swift */; };
+		28143C8022735904008D150E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C7F22735904008D150E /* DataModel.swift */; };
 		2876E036226F8005002B1326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E035226F8005002B1326 /* AppDelegate.swift */; };
 		2876E03B226F8005002B1326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876E039226F8005002B1326 /* Main.storyboard */; };
 		2876E03D226F8007002B1326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2876E03C226F8007002B1326 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28143C7D2273536F008D150E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		28143C7F22735904008D150E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		2876E032226F8005002B1326 /* Guardabosques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardabosques.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2876E035226F8005002B1326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2876E03A226F8005002B1326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		2876E047226F8024002B1326 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				28143C7F22735904008D150E /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				2876E05F226FEEC4002B1326 /* FaunaViewController.swift */,
 				2876E061226FEED7002B1326 /* WeatherViewController.swift */,
 				2876E063226FEEF3002B1326 /* AlertsViewController.swift */,
+				28143C7D2273536F008D150E /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +295,8 @@
 			files = (
 				2876E058226FD40F002B1326 /* RegisterViewController.swift in Sources */,
 				2876E060226FEEC4002B1326 /* FaunaViewController.swift in Sources */,
+				28143C8022735904008D150E /* DataModel.swift in Sources */,
+				28143C7E2273536F008D150E /* ProfileViewController.swift in Sources */,
 				2876E05C226FD45F002B1326 /* WelcomeViewController.swift in Sources */,
 				2876E036226F8005002B1326 /* AppDelegate.swift in Sources */,
 				2876E064226FEEF3002B1326 /* AlertsViewController.swift in Sources */,

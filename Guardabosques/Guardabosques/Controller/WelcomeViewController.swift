@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SQLite3
 
 class WelcomeViewController: UIViewController {
 
