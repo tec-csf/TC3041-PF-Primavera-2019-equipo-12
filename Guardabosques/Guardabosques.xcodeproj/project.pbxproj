@@ -13,6 +13,7 @@
 		28143C8422737BFE008D150E /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C8322737BFE008D150E /* LocationsViewController.swift */; };
 		28143C86227385FA008D150E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C85227385FA008D150E /* FeedViewController.swift */; };
 		28143C8822738E84008D150E /* SubmenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C8722738E84008D150E /* SubmenuViewController.swift */; };
+		28143C8A2273AD47008D150E /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C892273AD47008D150E /* CustomCell.swift */; };
 		2876E036226F8005002B1326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876E035226F8005002B1326 /* AppDelegate.swift */; };
 		2876E03B226F8005002B1326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876E039226F8005002B1326 /* Main.storyboard */; };
 		2876E03D226F8007002B1326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2876E03C226F8007002B1326 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		28143C8322737BFE008D150E /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		28143C85227385FA008D150E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		28143C8722738E84008D150E /* SubmenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmenuViewController.swift; sourceTree = "<group>"; };
+		28143C892273AD47008D150E /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		2876E032226F8005002B1326 /* Guardabosques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardabosques.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2876E035226F8005002B1326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2876E03A226F8005002B1326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				2876E03E226F8007002B1326 /* LaunchScreen.storyboard */,
 				2876E039226F8005002B1326 /* Main.storyboard */,
+				28143C892273AD47008D150E /* CustomCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				28143C8422737BFE008D150E /* LocationsViewController.swift in Sources */,
 				28143C8222736311008D150E /* ReportViewController.swift in Sources */,
 				2876E056226FD3C7002B1326 /* LogInViewController.swift in Sources */,
+				28143C8A2273AD47008D150E /* CustomCell.swift in Sources */,
 				2876E05A226FD430002B1326 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

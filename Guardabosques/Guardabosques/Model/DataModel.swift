@@ -11,10 +11,10 @@ import Foundation
 
 class Report {
     
-    var category = ""
-    var messageBody = ""
-    var sender = ""
-    var senderLocation = ""
+    var title = ""
+    var message = ""
+    var username = ""
+    var location = ""
     
 }
 

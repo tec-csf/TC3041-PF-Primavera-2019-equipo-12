@@ -7,33 +7,82 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
+    @IBOutlet weak var tableview: UITableView!
     var recievedCategory: String!
+    var reportArray : [Report] = [Report]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = recievedCategory.uppercased()
         
+        retrieveReports()
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
+    
+    func retrieveReports() {
+        
+        let reportsDB = Database.database().reference().child(recievedCategory)
+        
+        reportsDB.observe(.childAdded) { (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String,String>
+            let title = snapshotValue["Title"]!
+            let message = snapshotValue["MessageBody"]!
+            let username = snapshotValue["Sender"]!
+            let location = snapshotValue["Location"]!
+            
+            let report = Report()
+
+            report.title = title
+            report.message = message
+            report.username = username
+            report.location = location
+            
+            
+            self.reportArray.append(report)
+            
+            self.tableview.reloadData()
+            
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return reportArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        cell.textLabel?.text = recievedCategory
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
+    
+        cell.title.text = reportArray[indexPath.row].title
+        cell.location.text = reportArray[indexPath.row].location
+        cell.message.text = reportArray[indexPath.row].message
+        cell.username.text = reportArray[indexPath.row].username
         
         return cell
     }

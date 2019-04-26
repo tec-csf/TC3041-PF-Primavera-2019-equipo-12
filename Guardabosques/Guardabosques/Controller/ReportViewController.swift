@@ -53,7 +53,7 @@ class ReportViewController: UIViewController {
         
         let reportDictionary = ["Sender": name,
                                 "Location": location,
-                                "Subject": subcategory,
+                                "Title": subcategory,
                                  "MessageBody": messageBody,
                                  "Date": Date().debugDescription]
         
