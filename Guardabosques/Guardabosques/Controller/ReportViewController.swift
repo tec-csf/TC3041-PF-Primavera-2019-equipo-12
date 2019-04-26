@@ -8,15 +8,20 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class ReportViewController: UIViewController {
     
-    
+    var recievedArray: [String]!
     
     let report = Report()
+    
+    
     let name = Auth.auth().currentUser?.email
-    let location = "El Triunfo"
-    let category = "Ocelote"
+    var messageBody = ""
+    var location = "El Triunfo"
+    var category = ""
+    var subcategory = ""
     
     
     @IBOutlet weak var textView: UITextView!
@@ -29,40 +34,44 @@ class ReportViewController: UIViewController {
         
         self.postButton.isEnabled = true
 
-        report.category = category
+        category = recievedArray[0]
+        subcategory = recievedArray[1]
         
-        report.sender = name!
-        report.senderLocation = location
     }
     
 
     @IBAction func post(_ sender: Any) {
         
-        report.messageBody = textView.text!
+        SVProgressHUD.show()
+        
+        messageBody = textView.text!
         textView.endEditing(true)
         //textView.isEnabled = false
         postButton.isEnabled = false
         
-        let reportDB = Database.database().reference().child(report.category)
+        let reportDB = Database.database().reference().child(category)
         
-        let reportDictionary = ["Sender": report.sender,
-                                "Location": report.senderLocation,
-                                 "MessageBody": report.messageBody,
+        let reportDictionary = ["Sender": name,
+                                "Location": location,
+                                "Subject": subcategory,
+                                 "MessageBody": messageBody,
                                  "Date": Date().debugDescription]
         
         reportDB.childByAutoId().setValue(reportDictionary) {
             (error, reference) in
             
             if error != nil {
+                SVProgressHUD.dismiss()
                 print(error!)
             }
             else {
+                SVProgressHUD.dismiss()
                 print("Report saved successfully!")
             }
             
             
             self.postButton.isEnabled = true
-            self.textView.text = "Report..."
+            self.textView.text = "Reporte..."
             
             
         }

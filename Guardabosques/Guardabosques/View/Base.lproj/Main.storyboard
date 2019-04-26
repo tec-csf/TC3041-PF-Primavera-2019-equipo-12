@@ -396,9 +396,6 @@
                                     <constraint firstAttribute="width" constant="80" id="b89-ch-opz"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="rZf-iA-snT" kind="push" id="jc6-FJ-jcc"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -487,6 +484,7 @@
                     <connections>
                         <outlet property="image" destination="dEB-e1-gju" id="Yna-LQ-9fl"/>
                         <outlet property="tableview" destination="eGg-j4-luS" id="H6p-lD-EGv"/>
+                        <segue destination="rZf-iA-snT" kind="push" identifier="goToReport" id="Mef-kw-HKO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BK-FX-8Wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -627,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kZ-9z-X6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4442" y="11"/>
+            <point key="canvasLocation" x="4412" y="10"/>
         </scene>
         <!--Feed-->
         <scene sceneID="txM-H8-Brz">
