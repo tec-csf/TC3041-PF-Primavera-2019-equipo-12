@@ -18,11 +18,36 @@ class Report {
     
 }
 
+let locations: [String] = [
+
+    "Parque Ecologico de Xochimilco",
+    "Reserva de la Biosfera de Janos",
+    "Reserva de la Biosfera de El Triunfo",
+    "Planicies del Pacifico",
+    "Sierra Madre Occidental",
+    "Golfo de California",
+    "Reserva de la Biosfera El Cielo",
+    "Altiplano Mexicano",
+    "Sierra Madre Oriental",
+    "Selvas del Sur",
+    "Selvas del Sureste",
+    "Parque Nacional Popocatepetl",
+    "Reserva de la Biosfera El Vizcaino",
+    "Parque Nacional El Nevado de Colima",
+    "Zona de Refugio El Jabali",
+    "Sierra de Juarez",
+    "Jardin Botanico Instituto de Ecologia",
+    "Cactaceas de Guanajuato",
+    "Otro"
+]
+
+
 let fauna: [String] = [
     "Ajolote",
     "Perrito de la pradera",
     "Jaguar",
     "Ocelote",
+    "Quetzal",
     "Vaquita marina",
     "Manati de las Antillas",
     "Lobo gris mexicano",

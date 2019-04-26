@@ -13,6 +13,7 @@ import SVProgressHUD
 class RegisterViewController: UIViewController {
     
     
+    @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
@@ -24,6 +25,7 @@ class RegisterViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         emailTextfield.text = ""
         passwordTextfield.text = ""
+        nameTextField.text = ""
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,7 +53,7 @@ class RegisterViewController: UIViewController {
                 
                 SVProgressHUD.dismiss()
                 
-                self.performSegue(withIdentifier: "goToMenu", sender: self)
+                self.performSegue(withIdentifier: "goToLocations", sender: self)
             }
         }
         
