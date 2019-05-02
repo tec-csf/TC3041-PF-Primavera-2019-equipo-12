@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SQLite3
 import SVProgressHUD
 
 class ReportViewController: UIViewController {
@@ -16,10 +17,11 @@ class ReportViewController: UIViewController {
     
     let report = Report()
     
+    var db: OpaquePointer?
     
     let username = Auth.auth().currentUser?.email
     var messageBody = ""
-    var location = "El Triunfo"
+    var location = ""
     var category = ""
     var subcategory = ""
     
@@ -37,6 +39,52 @@ class ReportViewController: UIViewController {
         category = recievedArray[0]
         subcategory = recievedArray[1]
         
+        //the SQLITE database file
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            .appendingPathComponent("Guardabosques7.sqlite")
+        
+        //opening the database
+        if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
+            print("error opening database")
+        }
+        
+        
+        getLocation()
+    }
+    
+    
+    func getLocation() {
+        let queryStatementString = "SELECT Id,Location FROM User;"
+        
+        var queryStatement: OpaquePointer? = nil
+        // 1
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            // 2
+            if sqlite3_step(queryStatement) == SQLITE_ROW {
+                // 3
+                let id = sqlite3_column_int(queryStatement, 0)
+                
+                // 4
+                let queryResultCol1 = sqlite3_column_text(queryStatement, 1)
+                let locationObtained = String(cString: queryResultCol1!)
+                
+                
+                // 5
+                print("Query Result:")
+                print("\(id) | \(locationObtained)")
+                
+                location = locationObtained
+                
+                
+            } else {
+                print("Query returned no results")
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+        }
+        
+        // 6
+        sqlite3_finalize(queryStatement)
     }
     
 

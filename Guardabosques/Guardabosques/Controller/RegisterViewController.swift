@@ -14,7 +14,7 @@ import SQLite3
 class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var db: OpaquePointer?
-    var locationG: String!
+    var locationG: String! = locations[0]
     @IBOutlet var jobTextField: UITextField!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextfield: UITextField!
@@ -31,18 +31,47 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         //the SQLITE database file
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("Guardabosques.sqlite")
+            .appendingPathComponent("Guardabosques7.sqlite")
         
         //opening the database
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
             print("error opening database")
         }
         
-        //creating table
-        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, job TEXT, location TEXT)", nil, nil, nil) != SQLITE_OK {
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error creating table: \(errmsg)")
+        
+        
+//        //creating table
+//        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, job TEXT, location TEXT)", nil, nil, nil) != SQLITE_OK {
+//            let errmsg = String(cString: sqlite3_errmsg(db)!)
+//            print("error creating table: \(errmsg)")
+//        }
+        
+        let createTableString = """
+        CREATE TABLE IF NOT EXISTS User(
+        Id INT PRIMARY KEY NOT NULL,
+        Name CHAR(255),
+        Email CHAR(255),
+        Job CHAR(255),
+        Location CHAR(255));
+        """
+        
+        var createTableStatement: OpaquePointer? = nil
+        // 2
+        if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK {
+            // 3
+            if sqlite3_step(createTableStatement) == SQLITE_DONE {
+                print("User table created.")
+            } else {
+                print("User table could not be created.")
+            }
+        } else {
+            print("CREATE TABLE statement could not be prepared.")
         }
+        // 4
+        sqlite3_finalize(createTableStatement)
+        
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -92,69 +121,111 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     
-    func createDB() {
+    
+    func insertUser() {
+        let insertStatementString = "INSERT INTO User (Id, Name, Email, Job, Location) VALUES (?, ?, ?, ?, ?);"
         
-        // Only if Firebase register was succesful, then update local SQLite Database
-        let name = self.nameTextField.text!//.trimmingCharacters(in: .whitespacesAndNewlines)
-        let job = self.jobTextField.text!//.trimmingCharacters(in: .whitespacesAndNewlines)
-        let email = self.emailTextfield.text!//.trimmingCharacters(in: .whitespacesAndNewlines)
-        let location = self.locationG!
+        var insertStatement: OpaquePointer? = nil
         
-        
-        print("name:",name)
-        print("job:",job)
-        print("email:",email)
-        print("location:",location)
-        
-        //.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        //creating a statement
-        var stmt: OpaquePointer?
-        
-        //the insert query
-        let queryString = "INSERT INTO Users (name, email, job, location) VALUES (?,?,?,?)"
-        
-        //preparing the query
-        if sqlite3_prepare(self.db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
-            print("error preparing insert: \(errmsg)")
-            return
+        // 1
+        if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+            let id: Int32 = 1
+            let name: NSString = nameTextField.text! as NSString
+            let email: NSString = emailTextfield.text! as NSString
+            let job: NSString = jobTextField.text! as NSString
+            let location: NSString = locationG! as NSString
+            
+            print("Inserting:")
+            print("id:",id)
+            print("name:",name)
+            print("email:",email)
+            print("job:",job)
+            print("location:",location)
+            
+            // 2
+            sqlite3_bind_int(insertStatement, 1, id)
+            // 3
+            sqlite3_bind_text(insertStatement, 2, name.utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 3, email.utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 4, job.utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 5, location.utf8String, -1, nil)
+            
+            // 4
+            if sqlite3_step(insertStatement) == SQLITE_DONE {
+                print("Successfully inserted row.")
+            } else {
+                print("Could not insert row.")
+            }
+        } else {
+            print("INSERT statement could not be prepared.")
         }
+        // 5
+        sqlite3_finalize(insertStatement)
+    }
+    
+    func insertViejo() {
         
-        //binding the parameters
-        if sqlite3_bind_text(stmt, 1, name, -1, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        if sqlite3_bind_text(stmt, 2, email, -1, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        if sqlite3_bind_text(stmt, 3, job, -1, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        if sqlite3_bind_text(stmt, 4, location, -1, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        
-        
-        
-        //executing the query to insert values
-        if sqlite3_step(stmt) != SQLITE_DONE {
-            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
-            print("failure inserting User: \(errmsg)")
-            return
-        }
-        
-        
-        //displaying a success message
-        print("User saved successfully")
+//        // Only if Firebase register was succesful, then update local SQLite Database
+//        let name = self.nameTextField.text!//.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let job = self.jobTextField.text!//.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let email = self.emailTextfield.text!//.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let location = self.locationG!
+//
+//
+//        print("name:",name)
+//        print("job:",job)
+//        print("email:",email)
+//        print("location:",location)
+//
+//        //.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+//
+//        //creating a statement
+//        var stmt: OpaquePointer?
+//
+//        //the insert query
+//        let queryString = "INSERT INTO Users (name, email, job, location) VALUES (?,?,?,?)"
+//
+//        //preparing the query
+//        if sqlite3_prepare(self.db, queryString, -1, &stmt, nil) != SQLITE_OK{
+//            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
+//            print("error preparing insert: \(errmsg)")
+//            return
+//        }
+//
+//        //binding the parameters
+//        if sqlite3_bind_text(stmt, 1, name, -1, nil) != SQLITE_OK{
+//            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
+//            print("failure binding name: \(errmsg)")
+//            return
+//        }
+//        if sqlite3_bind_text(stmt, 2, email, -1, nil) != SQLITE_OK{
+//            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
+//            print("failure binding name: \(errmsg)")
+//            return
+//        }
+//        if sqlite3_bind_text(stmt, 3, job, -1, nil) != SQLITE_OK{
+//            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
+//            print("failure binding name: \(errmsg)")
+//            return
+//        }
+//        if sqlite3_bind_text(stmt, 4, location, -1, nil) != SQLITE_OK{
+//            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
+//            print("failure binding name: \(errmsg)")
+//            return
+//        }
+//
+//
+//
+//        //executing the query to insert values
+//        if sqlite3_step(stmt) != SQLITE_DONE {
+//            let errmsg = String(cString: sqlite3_errmsg(self.db)!)
+//            print("failure inserting User: \(errmsg)")
+//            return
+//        }
+//
+//
+//        //displaying a success message
+//        print("User saved successfully")
     }
     
     
@@ -175,7 +246,8 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             } else {
                 print("Registration Successful!")
                 
-                self.createDB()
+                //Insert to SQLite3
+                self.insertUser()
                 
                 
                 SVProgressHUD.dismiss()
