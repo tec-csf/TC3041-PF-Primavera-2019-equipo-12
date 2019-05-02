@@ -10,7 +10,6 @@
 		28143C7E2273536F008D150E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C7D2273536F008D150E /* ProfileViewController.swift */; };
 		28143C8022735904008D150E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C7F22735904008D150E /* DataModel.swift */; };
 		28143C8222736311008D150E /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C8122736311008D150E /* ReportViewController.swift */; };
-		28143C8422737BFE008D150E /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C8322737BFE008D150E /* LocationsViewController.swift */; };
 		28143C86227385FA008D150E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C85227385FA008D150E /* FeedViewController.swift */; };
 		28143C8822738E84008D150E /* SubmenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C8722738E84008D150E /* SubmenuViewController.swift */; };
 		28143C8A2273AD47008D150E /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143C892273AD47008D150E /* CustomCell.swift */; };
@@ -33,7 +32,6 @@
 		28143C7D2273536F008D150E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		28143C7F22735904008D150E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		28143C8122736311008D150E /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
-		28143C8322737BFE008D150E /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		28143C85227385FA008D150E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		28143C8722738E84008D150E /* SubmenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmenuViewController.swift; sourceTree = "<group>"; };
 		28143C892273AD47008D150E /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				2876E05B226FD45F002B1326 /* WelcomeViewController.swift */,
 				2876E055226FD3C7002B1326 /* LogInViewController.swift */,
 				2876E057226FD40F002B1326 /* RegisterViewController.swift */,
-				28143C8322737BFE008D150E /* LocationsViewController.swift */,
 				2876E059226FD430002B1326 /* MenuViewController.swift */,
 				28143C7D2273536F008D150E /* ProfileViewController.swift */,
 				28143C85227385FA008D150E /* FeedViewController.swift */,
@@ -303,7 +300,6 @@
 				2876E05C226FD45F002B1326 /* WelcomeViewController.swift in Sources */,
 				2876E036226F8005002B1326 /* AppDelegate.swift in Sources */,
 				28143C86227385FA008D150E /* FeedViewController.swift in Sources */,
-				28143C8422737BFE008D150E /* LocationsViewController.swift in Sources */,
 				28143C8222736311008D150E /* ReportViewController.swift in Sources */,
 				2876E056226FD3C7002B1326 /* LogInViewController.swift in Sources */,
 				28143C8A2273AD47008D150E /* CustomCell.swift in Sources */,
