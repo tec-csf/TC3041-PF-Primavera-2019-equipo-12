@@ -116,6 +116,10 @@ class ReportViewController: UIViewController {
             else {
                 SVProgressHUD.dismiss()
                 print("Report saved successfully!")
+             
+                let feedViewController = self.navigationController?.viewControllers[2] as! FeedViewController
+                
+                self.navigationController?.popToViewController(feedViewController, animated: true)
             }
             
             

@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         //the SQLITE database file
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("Guardabosques7.sqlite")
+            .appendingPathComponent("GBDB.sqlite")
         
         //opening the database
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
