@@ -112,7 +112,7 @@ Otra de sus características es que el conjunto de la base de datos (definicione
 * Location
 
  ### 3.4 DataSet
-Para nuestro conjunto de datos se realizo una investigación para encontrar el nombre de las Reservas, Fauna en peligro de Extinción y Flora.
+Para nuestro conjunto de datos se realizo una investigación para encontrar el nombre de las Reservas, Fauna en peligro de Extinción y Flora también en peligro de extinción. Todo solo en territorio Mexicano ya que es lo que nos importa resolver con nuestra app.
 
 ### 3.5 Arquitectura de la solución
 ![](images/GuardabosquesArq.001.jpeg)
