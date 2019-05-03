@@ -83,46 +83,7 @@ class ProfileViewController: UIViewController {
         
     }
     
-    func getUserDataViejo() {
-        
-//        let queryString = "SELECT * FROM Users"
-//        //WHERE email = '\(String(describing: Auth.auth().currentUser!.email!))'"
-//        //let queryString = "SELECT * FROM Users WHERE email = \(String(describing: Auth.auth().currentUser!.email!))"
-//        print(queryString)
-//
-//        //statement pointer
-//        var stmt:OpaquePointer?
-//
-//        //preparing the query
-//        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-//            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//            print("error preparing insert: \(errmsg)")
-//            return
-//        }
-//
-//        //traversing through all the records
-//        while(sqlite3_step(stmt) == SQLITE_ROW){
-//            //let id = sqlite3_column_int(stmt, 0)
-//            print("hola")
-//            let name = String(cString: sqlite3_column_text(stmt, 1))
-//            let email = String(cString: sqlite3_column_text(stmt, 2))
-//            let job = String(cString: sqlite3_column_text(stmt, 3))
-//            let location = String(cString: sqlite3_column_text(stmt, 4))
-////
-////
-//              print("1",String(cString: sqlite3_column_text(stmt, 1)))
-//              print("2",String(cString: sqlite3_column_text(stmt, 2)))
-//              print("3",String(cString: sqlite3_column_text(stmt, 3)))
-//              print("4",String(cString: sqlite3_column_text(stmt, 4)))
-////
-////
-//              nameLabel.text = name
-//              emailLabel.text = email
-//              locationLabel.text = location
-//              jobLabel.text = job
-//
-//        }
-    }
+
 
    
     @IBAction func logout(_ sender: Any) {
