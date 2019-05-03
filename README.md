@@ -112,46 +112,41 @@ Otra de sus características es que el conjunto de la base de datos (definicione
 * Job
 * Location
 
-
-
 ### 3.4 Arquitectura de la solución
 ![](images/GuardabosquesArq.001.jpeg)
 
 ## 3.4.1 Diagrama de las pantallas
 ![](images/diagramaPantallas.png)
 
-### 3.5 Frontend
+### 3.5 Firebase
+### Framework
+* Firebase
 
-*[Incluya aquí una explicación de la solución utilizada para el frontend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
+### API
+* Firebase provee un API para guardar y sincronizar datos en tiempo real.
 
-#### 3.5.1 Lenguaje de programación
-el lenguaje de programacion usado fue Swift 4
-#### 3.5.2 Framework
-#### 3.5.3 Librerías de funciones o dependencias
+### Backend
+* Es la base de datos y como se comunica con la app atraves de la librería Firebase Swift
 
-### 3.6 Backend
+### Lenguaje de Programación
+* Swift 4 para iOS 12
 
-*[Incluya aquí una explicación de la solución utilizada para el backend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
+### Librerias Externas 3.5.1
+* Libreria de Firebase para iOS
+* Libreria de SQlite
 
-#### 3.6.1 Lenguaje de programación
-#### 3.6.2 Framework
-#### 3.6.3 Librerías de funciones o dependencias
+### 3.6 Frontend
+* Las pantallas del diagrama fueron diseñadas en Xcode con Swift y el Storyboard Builder
 
-### 3.7 API
 
-*[Incluya aquí una explicación de la solución utilizada para implementar la API del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
-
-#### 3.7.1 Lenguaje de programación
-#### 3.7.2 Framework
-
-## 3.8 Pasos a seguir para utilizar el proyecto
+## 3.7 Pasos a seguir para utilizar el proyecto
 1. Clonar Repositorio
 2. Navegar a la carpeta Guardabosques
 3. Abir con Xcode el archivo Guardabosques.xcworkspace
 4. NOTA: No confundir con el otro archivo con extension .xcodeproj
 5. Con el proyecto abierto en Xcode, agregar un nuevo Bundle Identifier y un Development Team
 6. Correr el Proyecto en el Simulador de Xcode con el dispositivo predilecto
-## 4. Referencias
+## 3.8 Referencias
 
 * https://swift.org/documentation/
 * https://www.sqlite.org/docs.html
