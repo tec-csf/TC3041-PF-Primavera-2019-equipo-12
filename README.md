@@ -115,8 +115,10 @@ Otra de sus características es que el conjunto de la base de datos (definicione
 
 
 ### 3.4 Arquitectura de la solución
+![](images/GuardabosquesArq.001.jpeg)
 
-*[Incluya aquí un diagrama donde se aprecie la arquitectura de la solución propuesta, así como la interacción entre los diferentes componentes de la misma.]*
+## 3.4.1 Diagrama de las pantallas
+![](images/diagramaPantallas.png)
 
 ### 3.5 Frontend
 
