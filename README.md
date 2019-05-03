@@ -11,20 +11,7 @@
 ---
 ## 1. Aspectos generales
 
-### 1.1 Requerimientos técnicos
-
-A continuación se mencionan los requerimientos técnicos mínimos del proyecto, favor de tenerlos presente para que cumpla con todos.
-
-* El equipo tiene la libertad de elegir las tecnologías de desarrollo a utilizar en el proyecto, sin embargo, debe tener presente que la solución final se deberá ejecutar en una plataforma en la nube. Puede ser  [Google Cloud Platform](https://cloud.google.com/?hl=es), [Azure](https://azure.microsoft.com/en-us/) o AWS [AWS](https://aws.amazon.com/es/free/).
-* El proyecto debe utilizar al menos dos modelos de bases de datos diferentes, de los estudiados en el curso.
-* La solución debe utilizar una arquitectura de microservicios. Si no tiene conocimiento sobre este tema, le recomiendo la lectura [*Microservices*](https://martinfowler.com/articles/microservices.html) de [Martin Fowler](https://martinfowler.com).
-* La arquitectura debe ser modular, escalable, con redundancia y alta disponibilidad.
-* La arquitectura deberá estar separada claramente por capas (*frontend*, *backend*, *API RESTful*, datos y almacenamiento).
-* Los diferentes componentes del proyecto (*frontend*, *backend*, *API RESTful*, bases de datos, entre otros) deberán ejecutarse sobre contenedores [Docker](https://www.docker.com/) y utilizar [Kubernetes](https://kubernetes.io/) como orquestador.
-* Todo el código, *datasets* y la documentación del proyecto debe alojarse en un repositorio de GitHub siguiendo al estructura que aparece a continuación.
-
-
-### 1.2 Estructura del repositorio
+### 1.1 Estructura del repositorio
 
 ```
 - /                                     #Raiz de todo el proyecto
@@ -37,16 +24,6 @@ A continuación se mencionan los requerimientos técnicos mínimos del proyecto,
 		- Assets		# Imágenes que va a utilizar la app
 		- Pods			# Librerías externas para Swift
 ```
-
-### 1.3 Documentación  del proyecto
-
-Como parte de la entrega final del proyecto, se debe incluir la siguiente información:
-
-* Justificación de los modelo de *bases de datos* que seleccionaron.
-* Descripción del o los *datasets* y las fuentes de información utilizadas.
-* Guía de configuración, instalación y despliegue de la solución en la plataforma en la nube  seleccionada.
-* Documentación de la API. Puede ver un ejemplo en [Swagger](https://swagger.io/). 
-* El código debe estar documentado siguiendo los estándares definidos para el lenguaje de programación seleccionado.
 
 ## 2. Descripción del proyecto
 
