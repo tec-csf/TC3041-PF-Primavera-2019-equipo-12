@@ -18,9 +18,9 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // If there is a logged user, go straight to Menu
-        if Auth.auth().currentUser != nil {
-            performSegue(withIdentifier: "goToMenu", sender: self)
-        }
+//        if Auth.auth().currentUser != nil {
+//            performSegue(withIdentifier: "goToMenu", sender: self)
+//        }
     }
 
 }

@@ -19,6 +19,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = false
+        
         self.title = recievedCategory.uppercased()
         
         retrieveReports()

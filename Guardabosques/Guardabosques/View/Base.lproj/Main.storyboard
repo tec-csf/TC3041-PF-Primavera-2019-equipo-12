@@ -742,6 +742,7 @@
                     <connections>
                         <outlet property="postButton" destination="aKz-1r-PB6" id="V4x-Wm-rs2"/>
                         <outlet property="textView" destination="85R-Ns-OcM" id="vlS-HS-owZ"/>
+                        <segue destination="mm9-gw-BHT" kind="push" identifier="backToFeed" id="Fel-9b-s2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kZ-9z-X6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -920,6 +921,7 @@
         <image name="warning" width="409.60000610351562" height="409.60000610351562"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Fel-9b-s2N"/>
         <segue reference="vs0-qw-DPT"/>
     </inferredMetricsTieBreakers>
 </document>

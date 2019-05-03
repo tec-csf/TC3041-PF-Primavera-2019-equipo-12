@@ -34,6 +34,8 @@ class ReportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = false
+        
         self.postButton.isEnabled = true
 
         category = recievedArray[0]
@@ -51,6 +53,9 @@ class ReportViewController: UIViewController {
         
         getLocation()
     }
+    
+    
+  
     
     
     func getLocation() {
@@ -116,10 +121,15 @@ class ReportViewController: UIViewController {
             else {
                 SVProgressHUD.dismiss()
                 print("Report saved successfully!")
-             
-                let feedViewController = self.navigationController?.viewControllers[2] as! FeedViewController
                 
-                self.navigationController?.popToViewController(feedViewController, animated: true)
+                //Pop Back to Menu View Controller
+             
+                let controllers = self.navigationController?.viewControllers
+                for vc in controllers! {
+                    if vc is MenuViewController {
+                        _ = self.navigationController?.popToViewController(vc as! MenuViewController, animated: true)
+                    }
+                }
             }
             
             

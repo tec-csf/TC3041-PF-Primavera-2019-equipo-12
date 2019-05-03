@@ -23,6 +23,8 @@ class SubmenuViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = false
 
         print("Categoria Submenu: ")
         //print(recievedCategory)
