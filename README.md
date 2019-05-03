@@ -80,7 +80,36 @@ SQLite
 Es una base de datos relacional compatible con ACID (Atomicidad, Consistencia, Aislamiento y Durabilidad).
 Esta contenida en una relativamente pequeña biblioteca escrita en C.
 
-Nos permite ejecutar comandos SQL cen la base datos por lo que 
+Nos permite ejecutar comandos SQL en la base datos por lo que es fácil hacer consultas parametrizadas.
+ Otra de sus características es que el conjunto de la base de datos (definiciones, tablas, índices, y los propios datos), son guardados como un solo fichero estándar en la máquina host. Este diseño simple se logra bloqueando todo el fichero de base de datos al principio de cada transacción.
+
+### Modelo de Datos Firebase
+User
+	UID
+	email
+	password
+    created
+	signedin
+
+Guardabosques
+	flora
+	fauna
+	alerts
+	weather
+
+Report
+	date
+	location
+	messageBody
+	title
+	username
+   ### Modelo de Datos SQLite
+   Users
+	id
+	email
+	name
+	job
+	location
 
 
 
@@ -93,6 +122,7 @@ Nos permite ejecutar comandos SQL cen la base datos por lo que
 *[Incluya aquí una explicación de la solución utilizada para el frontend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
 #### 3.3.1 Lenguaje de programación
+el lenguaje de programacion usado fue Swift 4
 #### 3.3.2 Framework
 #### 3.3.3 Librerías de funciones o dependencias
 
@@ -110,24 +140,14 @@ Nos permite ejecutar comandos SQL cen la base datos por lo que
 
 #### 3.5.1 Lenguaje de programación
 #### 3.5.2 Framework
-#### 3.5.3 Librerías de funciones o dependencias
-
-*[Incluya aquí una explicación de cada uno de los endpoints que forman parte de la API. Cada endpoint debe estar correctamente documentado.]*
-
-*[Por cada endpoint debe incluir lo siguiente:]*
-
-* **Descripción**:
-* **URL**:
-* **Verbos HTTP**:
-* **Headers**:
-* **Formato JSON del cuerpo de la solicitud**: 
-* **Formato JSON de la respuesta**:
-
 
 ## 3.6 Pasos a seguir para utilizar el proyecto
-
-*[Incluya aquí una guía paso a paso para poder utilizar el proyecto, desde la clonación del repositorio hasta el despliegue de la solución en una plataforma en la nube.]*
-
+1. Clonar Repositorio
+2. Navegar a la carpeta Guardabosques
+3. Abir con Xcode el archivo Guardabosques.xcworkspace
+4. NOTA: No confundir con el otro archivo con extension .xcodeproj
+5. Con el proyecto abierto en Xcode, agregar un nuevo Bundle Identifier y un Development Team
+6. Correr el Proyecto en el Simulador de Xcode con el dispositivo predilecto
 ## 4. Referencias
 
 *[Incluya aquí las referencias a sitios de interés, datasets y cualquier otra información que haya utilizado para realizar el proyecto y que le puedan ser de utilidad a otras personas que quieran usarlo como referencia]*
