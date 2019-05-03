@@ -84,32 +84,33 @@ Nos permite ejecutar comandos SQL en la base datos por lo que es fácil hacer co
 Otra de sus características es que el conjunto de la base de datos (definiciones, tablas, índices, y los propios datos), son guardados como un solo fichero estándar en la máquina host. Este diseño simple se logra bloqueando todo el fichero de base de datos al principio de cada transacción.
 
 ### Modelo de Datos Firebase
-*User
-UID
-Email
-Password
-Created
-Signedin
+### User
+*UID
+*Email
+*Password
+*Created
+*Signedin
 
-*Guardabosques
-Flora
-Fauna
-Alerts
-Weather
+### Guardabosques
+*Flora
+*Fauna
+*Alerts
+*Weather
 
-*Report
-Date
-Location
-MessageBody
-Title
-Username
-   ### Modelo de Datos SQLite
-*Users
-id
-email
-name
-job
-location
+### Report
+*Date
+*Location
+*MessageBody
+*Title
+*Username
+ 
+ ### Modelo de Datos SQLite
+### Users
+*Id
+*Email
+*Name
+*Job
+*Location
 
 
 
