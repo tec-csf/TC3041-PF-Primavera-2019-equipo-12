@@ -66,7 +66,7 @@ La manera en la que se compartira la información será en momento real gracias 
 
 Se escogieron dos  bases de datos que son Firebase y SQLite
 
-°Firebase
+*Firebase
 Es una plataforma de desarrollo móvil en la nube de Google que proporciona un API para guardar y sincronizar datos en la nube en tiempo real, al mismo tiempo funciona como orquestador por lo que decidimos no ocupar Kubernetes ya que este está mejor optimizado para el desarrollo móvil.
 Otras carácteristicas de Firebase son que es:
 
@@ -76,40 +76,40 @@ Desarrollo: Permite construir mejores apps, permitiendo delegar determinadas ope
 
 Crecimiento: Permite gestionar los usuarios de las aplicaciones, pudiendo además captar nuevos. Para ello dispondremos de funcionalidades como las de invitaciones, indexación o notificaciones.
 
-SQLite
+*SQLite
 Es una base de datos relacional compatible con ACID (Atomicidad, Consistencia, Aislamiento y Durabilidad).
 Esta contenida en una relativamente pequeña biblioteca escrita en C.
 
 Nos permite ejecutar comandos SQL en la base datos por lo que es fácil hacer consultas parametrizadas.
- Otra de sus características es que el conjunto de la base de datos (definiciones, tablas, índices, y los propios datos), son guardados como un solo fichero estándar en la máquina host. Este diseño simple se logra bloqueando todo el fichero de base de datos al principio de cada transacción.
+Otra de sus características es que el conjunto de la base de datos (definiciones, tablas, índices, y los propios datos), son guardados como un solo fichero estándar en la máquina host. Este diseño simple se logra bloqueando todo el fichero de base de datos al principio de cada transacción.
 
 ### Modelo de Datos Firebase
-User
+*User
 UID
 Email
 Password
 Created
 Signedin
 
-#Guardabosques
+*Guardabosques
 Flora
 Fauna
 Alerts
 Weather
 
-Report
+*Report
 Date
 Location
 MessageBody
 Title
 Username
    ### Modelo de Datos SQLite
-   Users
-	id
-	email
-	name
-	job
-	location
+*Users
+id
+email
+name
+job
+location
 
 
 
