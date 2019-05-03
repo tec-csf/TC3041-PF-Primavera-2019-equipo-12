@@ -152,5 +152,6 @@ el lenguaje de programacion usado fue Swift 4
 5. Con el proyecto abierto en Xcode, agregar un nuevo Bundle Identifier y un Development Team
 6. Correr el Proyecto en el Simulador de Xcode con el dispositivo predilecto
 ## 4. Referencias
-
-*[Incluya aquí las referencias a sitios de interés, datasets y cualquier otra información que haya utilizado para realizar el proyecto y que le puedan ser de utilidad a otras personas que quieran usarlo como referencia]*
+https://swift.org/documentation/
+https://www.sqlite.org/docs.html
+http://firebase.google.com/
