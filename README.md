@@ -27,12 +27,12 @@ A continuación se mencionan los requerimientos técnicos mínimos del proyecto,
 ### 1.2 Estructura del repositorio
 
 ```
-- /                                             #Raiz de todo el proyecto
+- /                                     #Raiz de todo el proyecto
 	- README.md			# Archivo con los datos del proyecto
-	- Guardabosques		# Carpeta raíz del proyecto de Xcode
+	- Guardabosques			# Carpeta raíz del proyecto de Xcode
 		- Model			# Modelos de Reporte y Datasets
 		- View			# Storyboard y Vistas en Swift
-		- Controller	# Controladores de las vistas en Swift
+		- Controller		# Controladores de las vistas en Swift
 		- Fonts			# Fonts externas
 		- Assets		# Imágenes que va a utilizar la app
 		- Pods			# Librerías externas para Swift
@@ -111,13 +111,16 @@ Otra de sus características es que el conjunto de la base de datos (definicione
 * Job
 * Location
 
-### 3.4 Arquitectura de la solución
+ ### 3.4 DataSet
+Para nuestro conjunto de datos se realizo una investigación para encontrar el nombre de las Reservas, Fauna en peligro de Extinción y Flora.
+
+### 3.5 Arquitectura de la solución
 ![](images/GuardabosquesArq.001.jpeg)
 
-## 3.4.1 Diagrama de las pantallas
+## 3.5.1 Diagrama de las pantallas
 ![](images/diagramaPantallas.png)
 
-### 3.5 Firebase
+### 3.6 Firebase
 ### Framework
 * Firebase
 
@@ -130,23 +133,27 @@ Otra de sus características es que el conjunto de la base de datos (definicione
 ### Lenguaje de Programación
 * Swift 4 para iOS 12
 
-### Librerias Externas 3.5.1
+### Librerias Externas 3.6.1
 * Libreria de Firebase para iOS
 * Libreria de SQlite
 
-### 3.6 Frontend
+### 3.7 Frontend
 * Las pantallas del diagrama fueron diseñadas en Xcode con Swift y el Storyboard Builder
 
 
-## 3.7 Pasos a seguir para utilizar el proyecto
+## 3.8 Pasos a seguir para utilizar el proyecto
 1. Clonar Repositorio
 2. Navegar a la carpeta Guardabosques
 3. Abir con Xcode el archivo Guardabosques.xcworkspace
 4. NOTA: No confundir con el otro archivo con extension .xcodeproj
 5. Con el proyecto abierto en Xcode, agregar un nuevo Bundle Identifier y un Development Team
 6. Correr el Proyecto en el Simulador de Xcode con el dispositivo predilecto
-## 3.8 Referencias
+## 3.9 Referencias
 
 * https://swift.org/documentation/
 * https://www.sqlite.org/docs.html
 * http://firebase.google.com/
+* https://ecoosfera.com/2014/08/estas-son-las-reservas-naturales-de-mexico-como-protegerlas/
+* http://www.unionjalisco.mx/articulo/2018/03/16/medio-ambiente/especies-en-peligro-de-extincion-en-mexico 
+* https://www.forummexico.mx/top-5/%C3%A1reas-naturales-protegidas-en-m%C3%A9xico/
+* https://ecoosfera.com/2016/10/10-especies-mexicanas-en-peligro-de-extincion/
