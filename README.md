@@ -85,24 +85,24 @@ Nos permite ejecutar comandos SQL en la base datos por lo que es fácil hacer co
 
 ### Modelo de Datos Firebase
 User
-	UID
-	email
-	password
-    created
-	signedin
+UID
+Email
+Password
+Created
+Signedin
 
-Guardabosques
-	flora
-	fauna
-	alerts
-	weather
+#Guardabosques
+Flora
+Fauna
+Alerts
+Weather
 
 Report
-	date
-	location
-	messageBody
-	title
-	username
+Date
+Location
+MessageBody
+Title
+Username
    ### Modelo de Datos SQLite
    Users
 	id
