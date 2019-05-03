@@ -85,11 +85,11 @@ Otra de sus características es que el conjunto de la base de datos (definicione
 
 ### 3.2 Modelo de Datos Firebase
 ### User
-*UID
-*Email
-*Password
-*Created
-*Signedin
+* UID
+* Email
+* Password
+* Created
+* Signedin
 
 ### Guardabosques
 * Flora
