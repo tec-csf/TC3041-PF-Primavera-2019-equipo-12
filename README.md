@@ -83,7 +83,7 @@ Esta contenida en una relativamente pequeña biblioteca escrita en C.
 Nos permite ejecutar comandos SQL en la base datos por lo que es fácil hacer consultas parametrizadas.
 Otra de sus características es que el conjunto de la base de datos (definiciones, tablas, índices, y los propios datos), son guardados como un solo fichero estándar en la máquina host. Este diseño simple se logra bloqueando todo el fichero de base de datos al principio de cada transacción.
 
-### Modelo de Datos Firebase
+### 3.2 Modelo de Datos Firebase
 ### User
 *UID
 *Email
@@ -92,57 +92,57 @@ Otra de sus características es que el conjunto de la base de datos (definicione
 *Signedin
 
 ### Guardabosques
-*Flora
-*Fauna
-*Alerts
-*Weather
+* Flora
+* Fauna
+* Alerts
+* Weather
 
 ### Report
-*Date
-*Location
-*MessageBody
-*Title
-*Username
+* Date
+* Location
+* MessageBody
+* Title
+* Username
  
- ### Modelo de Datos SQLite
+ ### 3.3 Modelo de Datos SQLite
 ### Users
-*Id
-*Email
-*Name
-*Job
-*Location
+* Id
+* Email
+* Name
+* Job
+* Location
 
 
 
-### 3.2 Arquitectura de la solución
+### 3.4 Arquitectura de la solución
 
 *[Incluya aquí un diagrama donde se aprecie la arquitectura de la solución propuesta, así como la interacción entre los diferentes componentes de la misma.]*
 
-### 3.3 Frontend
+### 3.5 Frontend
 
 *[Incluya aquí una explicación de la solución utilizada para el frontend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
-#### 3.3.1 Lenguaje de programación
+#### 3.5.1 Lenguaje de programación
 el lenguaje de programacion usado fue Swift 4
-#### 3.3.2 Framework
-#### 3.3.3 Librerías de funciones o dependencias
+#### 3.5.2 Framework
+#### 3.5.3 Librerías de funciones o dependencias
 
-### 3.4 Backend
+### 3.6 Backend
 
 *[Incluya aquí una explicación de la solución utilizada para el backend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
-#### 3.4.1 Lenguaje de programación
-#### 3.4.2 Framework
-#### 3.4.3 Librerías de funciones o dependencias
+#### 3.6.1 Lenguaje de programación
+#### 3.6.2 Framework
+#### 3.6.3 Librerías de funciones o dependencias
 
-### 3.5 API
+### 3.7 API
 
 *[Incluya aquí una explicación de la solución utilizada para implementar la API del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
-#### 3.5.1 Lenguaje de programación
-#### 3.5.2 Framework
+#### 3.7.1 Lenguaje de programación
+#### 3.7.2 Framework
 
-## 3.6 Pasos a seguir para utilizar el proyecto
+## 3.8 Pasos a seguir para utilizar el proyecto
 1. Clonar Repositorio
 2. Navegar a la carpeta Guardabosques
 3. Abir con Xcode el archivo Guardabosques.xcworkspace
