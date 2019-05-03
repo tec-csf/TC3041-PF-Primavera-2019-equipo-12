@@ -64,10 +64,23 @@ Sepenso en dos diferentes bases de datos para almacenar la información de la ap
 La manera en la que se compartira la información será en momento real gracias a una conexión a internet
 ### 3.1 Modelos de *bases de datos* utilizados
 
-Se escogieron dos  bases de datos que son FireBase y SQLite
+Se escogieron dos  bases de datos que son Firebase y SQLite
 
 °Firebase
-Es una plataforma de desarrollo móvil en la nube de Google que proporciona un API para guardar y sincronizar datos en la nube en tiempo real,
+Es una plataforma de desarrollo móvil en la nube de Google que proporciona un API para guardar y sincronizar datos en la nube en tiempo real, al mismo tiempo funciona como orquestador por lo que decidimos no ocupar Kubernetes ya que este está mejor optimizado para el desarrollo móvil.
+Otras carácteristicas de Firebase son que es:
+
+Analítica: Provee una solución gratuita para tener todo tipo de medidas (hasta 500 tipos de eventos), para gestionarlo todo desde un único panel.
+
+Desarrollo: Permite construir mejores apps, permitiendo delegar determinadas operaciones en Firebase, para poder ahorrar tiempo, evitar bugs y obtener un aceptable nivel de calidad. Entre sus características destacan el almacenamiento, testeo, configuración remota, mensajería en la nube o autenticación, entre otras.
+
+Crecimiento: Permite gestionar los usuarios de las aplicaciones, pudiendo además captar nuevos. Para ello dispondremos de funcionalidades como las de invitaciones, indexación o notificaciones.
+
+SQLite
+Es una base de datos relacional compatible con ACID (Atomicidad, Consistencia, Aislamiento y Durabilidad).
+Esta contenida en una relativamente pequeña biblioteca escrita en C.
+
+Nos permite ejecutar comandos SQL cen la base datos por lo que 
 
 
 
