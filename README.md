@@ -51,15 +51,25 @@ Como parte de la entrega final del proyecto, se debe incluir la siguiente inform
 
 ## 2. Descripción del proyecto
 
-*[Incluya aquí la descripción del proyecto seleccionado.]*
+Crear una aplicación móvil que funcione como red social para todos los guarda bosques de México.
+Con el fin de compartir información sobre lo que hay en su reserva, bosque o estado en el que están, la información se compartira en tiempo real por lo que para cualquier amenaza o buena noticia los guarda bosques no perderán tiempo a menos de que no tengan acceso a una red de internet.
+En está aplicación se podran hacer post de 4 cosas en específico que son flora, fauna, alertas y clima (temperatura, humedad y presion).
+Se incluiran las especies en peligro de extinción de flora y fauna para facilitar el acceso a ellas.
+
 
 ## 3. Solución
 
-A continuación aparecen descritos los diferentes elementos que forman parte de la solución del proyecto.
-
+Para solucionar el problema se investigo a las especies de flora y fauna en peligro de extinción en México, también se hizo una lista de las reservas y areas protegidas de México.
+Sepenso en dos diferentes bases de datos para almacenar la información de la aplicación móvil así como en que se iba a desarrollar, la mejor manera para poder registrar a todos los guarda bosques es por medio de su correo electronico.
+La manera en la que se compartira la información será en momento real gracias a una conexión a internet
 ### 3.1 Modelos de *bases de datos* utilizados
 
-*[Incluya aquí una explicación del análisis realizado y la justificación de los modelos de *bases de datos* seleccionados. Incluya todo lo que considere necesario para que una persona sin conocimientos técnicos pueda entender de que trata su solución.]*
+Se escogieron dos  bases de datos que son FireBase y SQLite
+
+°Firebase
+Es una plataforma de desarrollo móvil en la nube de Google que proporciona un API para guardar y sincronizar datos en la nube en tiempo real,
+
+
 
 ### 3.2 Arquitectura de la solución
 
