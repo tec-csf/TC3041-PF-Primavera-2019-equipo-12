@@ -23,20 +23,19 @@ A continuación se mencionan los requerimientos técnicos mínimos del proyecto,
 * Los diferentes componentes del proyecto (*frontend*, *backend*, *API RESTful*, bases de datos, entre otros) deberán ejecutarse sobre contenedores [Docker](https://www.docker.com/) y utilizar [Kubernetes](https://kubernetes.io/) como orquestador.
 * Todo el código, *datasets* y la documentación del proyecto debe alojarse en un repositorio de GitHub siguiendo al estructura que aparece a continuación.
 
+
 ### 1.2 Estructura del repositorio
-El proyecto debe seguir la siguiente estructura de carpetas:
+
 ```
-- / 			        # Raíz de todo el proyecto
-    - README.md			# Archivo con los datos del proyecto (este archivo)
-    - frontend			# Carpeta con la solución del frontend (Web app)
-    - backend			# Carpeta con la solución del backend (CMS)
-    - api			# Carpeta con la solución de la API
-    - datasets		        # Carpeta con los datasets y recursos utilizados (csv, json, audio, videos, entre otros)
-    - dbs			# Carpeta con los modelos, catálogos y scripts necesarios para generar las bases de datos
-    - models			# Carpeta donde se almacenarán los modelos de Machine Learning ya entrenados 
-    - docs			# Carpeta con la documentación del proyecto
-        - stage_f               # Documentos de la entrega final
-        - manuals               # Manuales y guías
+- /                                             #Raiz de todo el proyecto
+	- README.md			# Archivo con los datos del proyecto
+	- Guardabosques		# Carpeta raíz del proyecto de Xcode
+		- Model			# Modelos de Reporte y Datasets
+		- View			# Storyboard y Vistas en Swift
+		- Controller	# Controladores de las vistas en Swift
+		- Fonts			# Fonts externas
+		- Assets		# Imágenes que va a utilizar la app
+		- Pods			# Librerías externas para Swift
 ```
 
 ### 1.3 Documentación  del proyecto
